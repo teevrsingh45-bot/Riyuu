@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Riya ✨</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ffeef2, #e8dff5, #fce1e4);
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border-radius: 24px;
+      padding: 35px 25px;
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(220, 100, 140, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      position: relative;
+    }
+
+    .page {
+      display: none;
+      animation: fadeIn 0.5s ease-in-out forwards;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    .icon {
+      font-size: 50px;
+      margin-bottom: 12px;
+    }
+
+    .page-indicator {
+      font-size: 13px;
+      color: #b05c84;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 16px;
+      font-size: 24px;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.7;
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    button {
+      flex: 1;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .btn-next {
+      background: linear-gradient(45deg, #ff6b8b, #ff8e8e);
+      color: white;
+      box-shadow: 0 4px 15px rgba(255, 107, 139, 0.4);
+    }
+
+    .btn-next:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 107, 139, 0.6);
+    }
+
+    .btn-prev {
+      background: #f1f2f6;
+      color: #555;
+    }
+
+    .btn-prev:hover {
+      background: #e4e7eb;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Page 1 -->
+    <div class="page active" id="page-1">
+      <div class="page-indicator">Page 1 of 7</div>
+      <div class="icon">🌸</div>
+      <h2>Dear Riya,</h2>
+      <p>Kuch log zindagi me aate hain aur maahol badal dete hain. Aapki presence kisi khilte hue phool aur thandi hawa ke jhonke jaisi hai.</p>
+      <div class="btn-group">
+        <button class="btn-next" onclick="nextPage(2)">Next ➔</button>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page" id="page-2">
+      <div class="page-indicator">Page 2 of 7</div>
+      <div class="icon">✨</div>
+      <h2>Aapki Khubsurat Smile</h2>
+      <p>Jab bhi aap smile karti ho, aas-paas ka pura din roshan ho jata hai. Aapki hansi me ek aisi simplicity aur chamak hai jo seedhe dil tak pahunchti hai.</p>
+      <div class="btn-group">
+        <button class="btn-prev" onclick="prevPage(1)">Back</button>
+        <button class="btn-next" onclick="nextPage(3)">Next ➔</button>
+      </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="page" id="page-3">
+      <div class="page-indicator">Page 3 of 7</div>
+      <div class="icon">💫</div>
+      <h2>Aapki Masoomiyat</h2>
+      <p>Aapki baatein aur aapka andaaz behad pure hai. Is bheed-bhaad wali duniya me itni saaf-dil aur genuine rehna hi aapko sabse alag banata hai.</p>
+      <div class="btn-group">
+        <button class="btn-prev" onclick="prevPage(2)">Back</button>
+        <button class="btn-next" onclick="nextPage(4)">Next ➔</button>
+      </div>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="page" id="page-4">
+      <div class="page-indicator">Page 4 of 7</div>
+      <div class="icon">🌷</div>
+      <h2>Aapki Grace aur Style</h2>
+      <p>Aap jo bhi pehanti hain ya jis sadgi se chalti hain, usme ek alag hi elegance hoti hai. Aap bina kisi koshish ke bhi har jagah stand out karti hain.</p>
+      <div class="btn-group">
+        <button class="btn-prev" onclick="prevPage(3)">Back</button>
+        <button class="btn-next" onclick="nextPage(5)">Next ➔</button>
+      </div>
+    </div>
+
+    <!-- Page 5 -->
+    <div class="page" id="page-5">
+      <div class="page-indicator">Page 5 of 7</div>
+      <div class="icon">🕊️</div>
+      <h2>Positive Energy</h2>
+      <p>Aapse baat karke har pareshani halki lagne lagti hai. Aapki baaton me jo sukoon aur energy hai, wo kisi ko bhi khush karne ke liye kafi hai.</p>
+      <div class="btn-group">
+        <button class="btn-prev" onclick="prevPage(4)">Back</button>
+        <button class="btn-next" onclick="nextPage(6)">Next ➔</button>
+      </div>
+    </div>
+
+    <!-- Page 6 -->
+    <div class="page" id="page-6">
+      <div class="page-indicator">Page 6 of 7</div>
+      <div class="icon">💖</div>
+      <h2>Gold Heart</h2>
+      <p>Chehre ki khubsurti to sab dekhte hain, par aapka dil usse bhi kahin zyada pyara aur kind hai. Dusro ki care karna aapki sabse badi khoobi hai.</p>
+      <div class="btn-group">
+        <button class="btn-prev" onclick="prevPage(5)">Back</button>
+        <button class="btn-next" onclick="nextPage(7)">Final Page ➔</button>
+      </div>
+    </div>
+
+    <!-- Page 7 -->
+    <div class="page" id="page-7">
+      <div class="page-indicator">Page 7 of 7</div>
+      <div class="icon">👑</div>
+      <h2>Always Stay You!</h2>
+      <p>Riya, aap sach me unique hain. Kabhi bhi kisi ke kehne par badalna mat, kyunki aap jaisi hain bilkul perfect hain. Keep shining always!</p>
+      <div class="btn-group">
+        <button class="btn-prev" onclick="prevPage(6)">
